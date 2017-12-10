@@ -6,6 +6,7 @@ namespace OkjKiralynok
     {
         char[,] T; // 2. feladat
         char ÜresCella; // 2. feladat
+        static Random R = new Random(); // 5. feladat
 
         public Tábla(char üresCella) // 3. feladat
         {
@@ -31,5 +32,20 @@ namespace OkjKiralynok
                 Console.WriteLine();
             }
         }
+
+        public void Elhelyez(int n) // 5. feladat
+        {
+            for (int i = 0; i < n;)
+            {
+                int sor = R.Next(0, 8);
+                int oszlop = R.Next(0, 8);
+                if (T[sor, oszlop] == ÜresCella)
+                {
+                    T[sor, oszlop] = 'K';
+                    i++;
+                }
+            }
+        }
+        
     }
 }
