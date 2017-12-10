@@ -99,7 +99,7 @@ namespace OkjKiralynok
             {
                 for (int oszlop = 0; oszlop < 8; oszlop++)
                 {
-                    sw.Write("{0}", T[sor, oszlop]);
+                    sw.Write($"{T[sor, oszlop]}");
                 }
                 sw.WriteLine();
             }
