@@ -7,16 +7,16 @@ namespace OkjKiralynok
         static void Main(string[] args)
         {
             Console.WriteLine("4. feladat: Az üres tábla:");
-            Tábla t = new Tábla('#');
-            t.Megjelenít();
+            Tábla tábla = new Tábla('#');
+            tábla.Megjelenít();
 
             Console.WriteLine("\n6. feladat: A feltöltött tábla:");
-            t.Elhelyez(8);
-            t.Megjelenít();
+            tábla.Elhelyez(8);
+            tábla.Megjelenít();
 
             Console.WriteLine("\n9. feladat: Üres oszlopok és sorok száma:");
-            Console.WriteLine($"Oszlopok: {t.ÜresOszlopokSzáma}");
-            Console.WriteLine($"Sorok: {t.ÜresSorokSzáma}");
+            Console.WriteLine($"Oszlopok: {tábla.ÜresOszlopokSzáma}");
+            Console.WriteLine($"Sorok: {tábla.ÜresSorokSzáma}");
 
             Console.ReadKey();
         }
