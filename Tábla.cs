@@ -46,6 +46,23 @@ namespace OkjKiralynok
                 }
             }
         }
-        
+
+         public bool ÜresSor(int sorAzon) // 7. feladat
+        {
+            for (int oszlop = 0; oszlop < 8; oszlop++)
+            {
+                if (T[sorAzon, oszlop] != ÜresCella) return false;
+            }
+            return true;
+        }
+
+        public bool ÜresOszlop(int oszlopAzon) // 7. feladat
+        {
+            for (int sor = 0; sor < 8; sor++)
+            {
+                if (T[sor, oszlopAzon] != ÜresCella) return false;
+            }
+            return true;
+        }
     }
 }
