@@ -14,6 +14,10 @@ namespace OkjKiralynok
             t.Elhelyez(8);
             t.Megjelenít();
 
+            Console.WriteLine("\n9. feladat: Üres oszlopok és sorok száma:");
+            Console.WriteLine($"Oszlopok: {t.ÜresOszlopokSzáma}");
+            Console.WriteLine($"Sorok: {t.ÜresSorokSzáma}");
+
             Console.ReadKey();
         }
     }
