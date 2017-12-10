@@ -10,6 +10,10 @@ namespace OkjKiralynok
             Tábla t = new Tábla('#');
             t.Megjelenít();
 
+            Console.WriteLine("\n6. feladat: A feltöltött tábla:");
+            t.Elhelyez(8);
+            t.Megjelenít();
+
             Console.ReadKey();
         }
     }
