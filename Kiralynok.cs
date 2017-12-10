@@ -8,26 +8,26 @@ namespace OkjKiralynok
         static void Main(string[] args)
         {
             Console.WriteLine("4. feladat: Az üres tábla:");
-            Tábla t = new Tábla('#');
-            t.Megjelenít();
+            Tábla tábla = new Tábla('#');
+            tábla.Megjelenít();
 
             Console.WriteLine("\n6. feladat: A feltöltött tábla:");
-            t.Elhelyez(8);
-            t.Megjelenít();
+            tábla.Elhelyez(8);
+            tábla.Megjelenít();
 
             Console.WriteLine("\n9. feladat: Üres oszlopok és sorok száma:");
-            Console.WriteLine($"Oszlopok: {t.ÜresOszlopokSzáma}");
-            Console.WriteLine($"Sorok: {t.ÜresSorokSzáma}");
+            Console.WriteLine($"Oszlopok: {tábla.ÜresOszlopokSzáma}");
+            Console.WriteLine($"Sorok: {tábla.ÜresSorokSzáma}");
 
-            // 10. feladat
-            const string fn = "tablak64.txt";
-            if (File.Exists(fn)) File.Delete(fn);  // System.IO névtér importja
-            Console.WriteLine($"10. feladat: {fn}");
+            // 10. feladat  (System.IO névtér importja)
+            const string fájlNeve = "tablak64.txt";
+            if (File.Exists(fájlNeve)) File.Delete(fájlNeve);  // 10.a
+            Console.WriteLine($"10. feladat: {fájlNeve}");
             for (int i = 1; i < 65; i++)
             {
-                Tábla tbl = new Tábla('*');
-                tbl.Elhelyez(i);
-                tbl.FájlbaÍr(fn);
+                Tábla aktTábla = new Tábla('*'); // 10.b
+                aktTábla.Elhelyez(i); // 10.d
+                aktTábla.FájlbaÍr(fájlNeve); // 10.c
             }
 
             Console.ReadKey();
