@@ -1,4 +1,5 @@
 using System;
+using System.IO; // 10. feladat
 
 namespace OkjKiralynok
 {
@@ -89,6 +90,21 @@ namespace OkjKiralynok
                 }
                 return üresDb;
             }
+        }
+
+         public void FájlbaÍr(string fájlNeve) // 10. feladat 
+        {
+            StreamWriter sw = new StreamWriter(fájlNeve, true); // System.IO névtér importja
+            for (int sor = 0; sor < 8; sor++)
+            {
+                for (int oszlop = 0; oszlop < 8; oszlop++)
+                {
+                    sw.Write("{0}", T[sor, oszlop]);
+                }
+                sw.WriteLine();
+            }
+            sw.WriteLine();
+            sw.Close();
         }
     }
 }
