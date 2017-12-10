@@ -7,8 +7,8 @@ namespace OkjKiralynok
         static void Main(string[] args)
         {
             Console.WriteLine("4. feladat: Az üres tábla:");
-            Tábla t = new Tábla('#');
-            t.Megjelenít();
+            Tábla tábla = new Tábla('#');
+            tábla.Megjelenít();
 
             Console.ReadKey();
         }
