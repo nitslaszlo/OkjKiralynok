@@ -26,7 +26,7 @@ namespace OkjKiralynok
             {
                 for (int oszlop = 0; oszlop < 8; oszlop++)
                 {
-                    Console.Write("{0}", T[sor, oszlop]);
+                    Console.Write($"{T[sor, oszlop]}");
                 }
                 Console.WriteLine();
             }
