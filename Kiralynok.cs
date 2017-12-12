@@ -22,13 +22,15 @@ namespace OkjKiralynok
             // 10. feladat  (System.IO névtér importja)
             const string fájlNeve = "tablak64.txt";
             if (File.Exists(fájlNeve)) File.Delete(fájlNeve);  // 10.a
+            StreamWriter sw = new StreamWriter(fájlNeve, true);
             Console.WriteLine($"10. feladat: {fájlNeve}");
             for (int i = 1; i < 65; i++)
             {
                 Tábla aktTábla = new Tábla('*'); // 10.b
                 aktTábla.Elhelyez(i); // 10.d
-                aktTábla.FájlbaÍr(fájlNeve); // 10.c
+                aktTábla.FájlbaÍr(sw); // 10.c
             }
+            sw.Close();
 
             Console.ReadKey();
         }
