@@ -5,7 +5,7 @@ namespace OkjKiralynok
 {
     class Kiralynok // 0. feladat (Fájl neve Kiralynok.cs)
     {
-        static void Main(string[] args)
+        static void Main()
         {
             // 10. feladat  (System.IO névtér importja)
             const string fájlNeve = "tablak64.txt";
