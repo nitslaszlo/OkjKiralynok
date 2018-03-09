@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO; // 10. feladat
 
 namespace OkjKiralynok
@@ -15,7 +15,7 @@ namespace OkjKiralynok
             Tábla tábla = new Tábla('#');
             tábla.Megjelenít();
 
-            Console.WriteLine("\n6. feladat: A feltöltött tábla:");
+            Console.WriteLine("\n6. feladat: A feltöltött tábla :");
             tábla.Elhelyez(8);
             tábla.Megjelenít();
 
